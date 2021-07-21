@@ -17,12 +17,14 @@
   --bs-teal: #20c997;
   --bs-cyan: #0dcaf0;
   --bs-white: #fff;
-  --bs-gray: #6c757d;
+  --bs-gray: var(--bs-secondary);
   --bs-gray-dark: #343a40;
   /*--bs-primary: var(--bs-primary);*/
-  --bs-primary: #00FFFF; /* Personalization */
-  --sh-primary: rgba(0, 255, 255, 0.25); /* Personalization */
-  --bs-secondary: #6c757d;
+  --bs-primary: #A0522D; /* Personalization */
+  --sh-primary: rgba(160, 82, 45, 0.25); /* Personalization */
+  /*--bs-secondary: var(--bs-secondary);*/
+  --bs-secondary: #32CD32; /* Personalization */
+  --sh-secondary: rgba(50, 205, 50, 0.25); /* Personalization */
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -278,7 +280,7 @@ table {
 caption {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  color: #6c757d;
+  color: var(--bs-secondary);
   text-align: left;
 }
 
@@ -557,7 +559,7 @@ progress {
   margin-top: -1rem;
   margin-bottom: 1rem;
   font-size: 0.875em;
-  color: #6c757d;
+  color: var(--bs-secondary);
 }
 .blockquote-footer::before {
   content: "— ";
@@ -588,7 +590,7 @@ progress {
 
 .figure-caption {
   font-size: 0.875em;
-  color: #6c757d;
+  color: var(--bs-secondary);
 }
 
 .container,
@@ -2149,7 +2151,7 @@ progress {
 .form-text {
   margin-top: 0.25rem;
   font-size: 0.875em;
-  color: #6c757d;
+  color: var(--bs-secondary);
 }
 
 .form-control {
@@ -2191,11 +2193,11 @@ progress {
   height: 1.5em;
 }
 .form-control::-moz-placeholder {
-  color: #6c757d;
+  color: var(--bs-secondary);
   opacity: 1;
 }
 .form-control::placeholder {
-  color: #6c757d;
+  color: var(--bs-secondary);
   opacity: 1;
 }
 .form-control:disabled, .form-control[readonly] {
@@ -2974,8 +2976,8 @@ textarea.form-control-lg {
 
 .btn-secondary {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
 }
 .btn-secondary:hover {
   color: #fff;
@@ -2998,8 +3000,8 @@ textarea.form-control-lg {
 }
 .btn-secondary:disabled, .btn-secondary.disabled {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
 }
 
 .btn-success {
@@ -3208,27 +3210,27 @@ textarea.form-control-lg {
 }
 
 .btn-outline-secondary {
-  color: #6c757d;
-  border-color: #6c757d;
+  color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
 }
 .btn-outline-secondary:hover {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
 }
 .btn-check:focus + .btn-outline-secondary, .btn-outline-secondary:focus {
   box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.5);
 }
 .btn-check:checked + .btn-outline-secondary, .btn-check:active + .btn-outline-secondary, .btn-outline-secondary:active, .btn-outline-secondary.active, .btn-outline-secondary.dropdown-toggle.show {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
 }
 .btn-check:checked + .btn-outline-secondary:focus, .btn-check:active + .btn-outline-secondary:focus, .btn-outline-secondary:active:focus, .btn-outline-secondary.active:focus, .btn-outline-secondary.dropdown-toggle.show:focus {
   box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.5);
 }
 .btn-outline-secondary:disabled, .btn-outline-secondary.disabled {
-  color: #6c757d;
+  color: var(--bs-secondary);
   background-color: transparent;
 }
 
@@ -3391,7 +3393,7 @@ textarea.form-control-lg {
   color: #0a58ca;
 }
 .btn-link:disabled, .btn-link.disabled {
-  color: #6c757d;
+  color: var(--bs-secondary);
 }
 
 .btn-lg, .btn-group-lg > .btn {
@@ -3700,7 +3702,7 @@ textarea.form-control-lg {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
   font-size: 0.875rem;
-  color: #6c757d;
+  color: var(--bs-secondary);
   white-space: nowrap;
 }
 
@@ -3859,7 +3861,7 @@ textarea.form-control-lg {
   color: #0a58ca;
 }
 .nav-link.disabled {
-  color: #6c757d;
+  color: var(--bs-secondary);
   pointer-events: none;
   cursor: default;
 }
@@ -3879,7 +3881,7 @@ textarea.form-control-lg {
   isolation: isolate;
 }
 .nav-tabs .nav-link.disabled {
-  color: #6c757d;
+  color: var(--bs-secondary);
   background-color: transparent;
   border-color: transparent;
 }
@@ -4532,11 +4534,11 @@ textarea.form-control-lg {
 .breadcrumb-item + .breadcrumb-item::before {
   float: left;
   padding-right: 0.5rem;
-  color: #6c757d;
+  color: var(--bs-secondary);
   content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
 }
 .breadcrumb-item.active {
-  color: #6c757d;
+  color: var(--bs-secondary);
 }
 
 .pagination {
@@ -4583,7 +4585,7 @@ textarea.form-control-lg {
   border-color: var(--bs-primary);
 }
 .page-item.disabled .page-link {
-  color: #6c757d;
+  color: var(--bs-secondary);
   pointer-events: none;
   background-color: #fff;
   border-color: #dee2e6;
@@ -4852,7 +4854,7 @@ textarea.form-control-lg {
   border-bottom-left-radius: inherit;
 }
 .list-group-item.disabled, .list-group-item:disabled {
-  color: #6c757d;
+  color: var(--bs-secondary);
   pointer-events: none;
   background-color: #fff;
 }
@@ -5201,7 +5203,7 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   padding: 0.5rem 0.75rem;
-  color: #6c757d;
+  color: var(--bs-secondary);
   background-color: rgba(255, 255, 255, 0.85);
   background-clip: padding-box;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -6105,7 +6107,7 @@ textarea.form-control-lg {
 }
 
 .link-secondary {
-  color: #6c757d;
+  color: var(--bs-secondary);
 }
 .link-secondary:hover, .link-secondary:focus {
   color: #565e64;
@@ -6512,7 +6514,7 @@ textarea.form-control-lg {
 }
 
 .border-secondary {
-  border-color: #6c757d !important;
+  border-color: var(--bs-secondary) !important;
 }
 
 .border-success {
@@ -7341,7 +7343,7 @@ textarea.form-control-lg {
 }
 
 .text-secondary {
-  color: #6c757d !important;
+  color: var(--bs-secondary) !important;
 }
 
 .text-success {
@@ -7377,7 +7379,7 @@ textarea.form-control-lg {
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: var(--bs-secondary) !important;
 }
 
 .text-black-50 {
@@ -7397,7 +7399,7 @@ textarea.form-control-lg {
 }
 
 .bg-secondary {
-  background-color: #6c757d !important;
+  background-color: var(--bs-secondary) !important;
 }
 
 .bg-success {

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+	<header th:fragment="header">
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="/index">
+					<img th:src="@{/resources/images/logo.png}" th:alt="#{app.title}" class="d-inline-block align-text-top" width="28" height="28">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav me-auto mb-2 mb-md-0">
+						<li class="nav-item">
+							<a class="nav-link" href="/services" th:text="#{menu.services}"></a>
+						</li>
+<!-- 						<li class="nav-item dropdown"> -->
+<!-- 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{menu.equipo}"></a> -->
+<!-- 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
+<!-- 								<li> -->
+<!-- 									<a class="dropdown-item" href="/armasCC" th:text="#{menu.armascc}"></a> -->
+<!-- 								</li> -->
+<!-- 								<li> -->
+<!-- 									<a class="dropdown-item" href="/armasCD" th:text="#{menu.armascd}"></a> -->
+<!-- 								</li> -->
+<!-- 								<li> -->
+<!-- 									<hr class="dropdown-divider"> -->
+<!-- 								</li> -->
+<!-- 								<li> -->
+<!-- 									<a class="dropdown-item" href="/blindajes" th:text="#{menu.blindajes}"></a> -->
+<!-- 								</li> -->
+<!-- 							</ul> -->
+<!-- 						</li> -->
+<!-- 						<li class="nav-item dropdown"> -->
+<!-- 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{menu.metafisica}"></a> -->
+<!-- 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
+<!-- 								<li> -->
+<!-- 									<a class="dropdown-item" href="/invocaciones" th:text="#{menu.magia}"></a> -->
+<!-- 								</li> -->
+<!-- 								<li> -->
+<!-- 									<a class="dropdown-item" href="/poderesVidente" th:text="#{menu.vision}"></a> -->
+<!-- 								</li> -->
+<!-- 								<li> -->
+<!-- 									<a class="dropdown-item" href="/poderesNigromanticos" th:text="#{menu.nigromancia}"></a> -->
+<!-- 								</li> -->
+<!-- 								<li> -->
+<!-- 									<a class="dropdown-item" href="/milagros" th:text="#{menu.inspiraciondivina}"></a> -->
+<!-- 								</li> -->
+<!-- 							</ul> -->
+<!-- 						</li> -->
+					</ul>
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-light" type="submit">Search</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+</body>
+</html>
