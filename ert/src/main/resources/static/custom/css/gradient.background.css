@@ -1,0 +1,3 @@
+.gradient-background {
+	background-image: linear-gradient(90deg, var(--bs-secondary) 0%, var(--bs-primary) 50%, var(--bs-secondary) 100%);
+}
