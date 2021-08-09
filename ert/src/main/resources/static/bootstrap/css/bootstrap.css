@@ -20,8 +20,8 @@
   --bs-gray: var(--bs-secondary);
   --bs-gray-dark: #343a40;
   /*--bs-primary: var(--bs-primary);*/
-  --bs-primary: #A0522D; /* Personalization */
-  --sh-primary: rgba(160, 82, 45, 0.25); /* Personalization */
+  --bs-primary: #8B4513; /* Personalization */
+  --sh-primary: rgba(139, 69, 19, 0.25); /* Personalization */
   /*--bs-secondary: var(--bs-secondary);*/
   --bs-secondary: #32CD32; /* Personalization */
   --sh-secondary: rgba(50, 205, 50, 0.25); /* Personalization */
