@@ -16,10 +16,10 @@
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav me-auto mb-2 mb-md-0">
 						<li class="nav-item">
-							<a class="nav-link" href="/races" th:text="#{menu.races}"></a>
+							<a th:class="${activeLinkRaces} == true ? 'nav-link active' : 'nav-link'" href="/races" th:text="#{menu.races}"></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/kits" th:text="#{menu.kits}"></a>
+							<a th:class="${activeLinkKits} == true ? 'nav-link active' : 'nav-link'" href="/kits" th:text="#{menu.kits}"></a>
 						</li>
 <!-- 						<li class="nav-item dropdown"> -->
 <!-- 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{menu.equipo}"></a> -->
