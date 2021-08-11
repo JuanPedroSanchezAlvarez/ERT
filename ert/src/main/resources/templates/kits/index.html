@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title th:text="#{app.title}"></title>
+<link rel="shortcut icon" th:href="@{/resources/images/favicon.png}" />
+<link th:rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.css}" />
+</head>
+<body>
+
+ 	<header th:replace="fragments/header :: header"></header>
+
+	<main class="pt-3 my-5">
+		<div th:replace="kits/fragments/paginaIndex :: paginaIndex"></div>
+	</main>
+
+ 	<footer th:replace="fragments/footer :: footer"></footer>
+
+	<script th:src="@{/bootstrap/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
