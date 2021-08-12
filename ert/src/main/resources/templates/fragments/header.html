@@ -16,6 +16,9 @@
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav me-auto mb-2 mb-md-0">
 						<li class="nav-item">
+							<a th:class="${activeLinkCharacters} == true ? 'nav-link active' : 'nav-link'" href="/characters" th:text="#{menu.characters}"></a>
+						</li>
+						<li class="nav-item">
 							<a th:class="${activeLinkRaces} == true ? 'nav-link active' : 'nav-link'" href="/races" th:text="#{menu.races}"></a>
 						</li>
 						<li class="nav-item">
