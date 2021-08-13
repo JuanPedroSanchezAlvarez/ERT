@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title th:text="#{app.title}"></title>
+<link rel="shortcut icon" th:href="@{/resources/images/favicon.png}" />
+<link th:rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.css}" />
+</head>
+<body>
+
+ 	<header th:replace="fragments/header :: header"></header>
+
+	<main class="pt-3 my-5 container">
+
+		<div class="alert alert-danger text-center" role="alert">
+			<h1>Thymeleaf Error Page</h1>
+		</div>
+		<table class="table table-striped table-responsive caption-top">
+			<caption class="text-center fw-bold text-light bg-danger">Something went wrong</caption>
+			<tbody>
+    			<tr>
+      				<td>Date</td>
+      				<td th:text="${timestamp}"></td>
+    			</tr>
+    			<tr>
+      				<td>Path</td>
+      				<td th:text="${path}"></td>
+    			</tr>
+    			<tr>
+      				<td>Error Type</td>
+      				<td th:text="${error}"></td>
+    			</tr>
+    			<tr>
+      				<td>Status</td>
+      				<td th:text="${status}"></td>
+    			</tr>
+    			<tr>
+      				<td>Message</td>
+      				<td th:text="${message}"></td>
+    			</tr>
+    			<tr>
+      				<td>Exception</td>
+      				<td th:text="${exception}"></td>
+    			</tr>
+    			<tr>
+      				<td>Trace</td>
+      				<td th:text="${trace}"></td>
+    			</tr>
+    		</tbody>
+		</table>
+
+	</main>
+
+ 	<footer th:replace="fragments/footer :: footer"></footer>
+
+	<script th:src="@{/bootstrap/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
