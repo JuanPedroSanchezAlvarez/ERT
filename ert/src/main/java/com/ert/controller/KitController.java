@@ -15,13 +15,13 @@ import lombok.extern.slf4j.Slf4j;
 public class KitController {
 
 	private static final String ACTIVE_LINK = "activeLinkKits";
-	private static final String INDEX = "kits/index";
+	private static final String INDEX_URL = "kits/index";
 
 	@GetMapping(path = {"", "/"})
 	public String getIndex(Model model) {
 		log.debug("LOG: Class: " + this.getClass().getName() + " --> Method: " + LoggingUtils.getCurrentMethodName());
 		model.addAttribute(ACTIVE_LINK, true);
-		return INDEX;
+		return INDEX_URL;
 	}
 
 }

@@ -15,13 +15,13 @@ import lombok.extern.slf4j.Slf4j;
 public class PlayableCharacterController {
 
 	private static final String ACTIVE_LINK = "activeLinkCharacters";
-	private static final String INDEX = "characters/index";
+	private static final String INDEX_URL = "characters/index";
 
 	@GetMapping(path = {"", "/"})
 	public String getIndex(Model model) {
 		log.debug("LOG: Class: " + this.getClass().getName() + " --> Method: " + LoggingUtils.getCurrentMethodName());
 		model.addAttribute(ACTIVE_LINK, true);
-		return INDEX;
+		return INDEX_URL;
 	}
 
 }

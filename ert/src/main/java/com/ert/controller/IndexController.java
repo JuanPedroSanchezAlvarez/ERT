@@ -11,12 +11,12 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 public class IndexController {
 
-	private static final String INDEX = "index";
+	private static final String INDEX_URL = "index";
 	
 	@GetMapping(path = {"", "/", "index", "index.html"})
 	public String getIndex() {
 		log.debug("LOG: Class: " + this.getClass().getName() + " --> Method: " + LoggingUtils.getCurrentMethodName());
-		return INDEX;
+		return INDEX_URL;
 	}
 
 }
