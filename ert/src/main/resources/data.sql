@@ -1,3 +1,12 @@
 /* ERT */
 
-/* INSERT INTO frases (autor, texto) VALUES ('Abraham Lincoln.', 'No puedes otorgar la fuerza al débil debilitando al fuerte; no puedes ayudar al pobre arruinando al rico.'); */
+INSERT INTO races (parent_race, name) VALUES ('Melion',  'Alsano');
+INSERT INTO races (parent_race, name) VALUES ('Melion',  'Kenion');
+INSERT INTO races (parent_race, name) VALUES ('Melion',  'Mirr');
+INSERT INTO races (parent_race, name) VALUES ('Melion',  'Taerita');
+INSERT INTO races (parent_race, name) VALUES ('Melion',  'Moellan');
+INSERT INTO races (parent_race, name) VALUES ('Melion',  'Samnio');
+INSERT INTO races (parent_race, name) VALUES ('Dweloin', 'Pearoin');
+INSERT INTO races (parent_race, name) VALUES ('Selion',  'Nethan');
+INSERT INTO races (parent_race, name) VALUES ('Ywen',    'Celestial');
+INSERT INTO races (parent_race, name) VALUES ('Ywen',    'Amanecer');

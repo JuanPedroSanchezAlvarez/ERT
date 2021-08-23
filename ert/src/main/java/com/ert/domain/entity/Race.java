@@ -17,5 +17,8 @@ public class Race extends BaseEntity {
 
 	@Column(length = 20)
 	private String name;
+	
+	@Column(length = 20, name = "parent_race")
+	private String parentRace;
 
 }

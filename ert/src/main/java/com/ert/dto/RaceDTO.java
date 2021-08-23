@@ -13,5 +13,9 @@ public class RaceDTO extends BaseDTO {
 	@NotBlank
 	@Size(max = 20)
 	private String name;
+	
+	@NotBlank
+	@Size(max = 20)
+	private String parentRace;
 
 }
