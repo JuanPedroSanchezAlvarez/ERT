@@ -5,8 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.ert.service.IRaceService;
 import com.ert.util.LoggingUtils;
-
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -16,11 +16,18 @@ public class RaceController {
 
 	private static final String ACTIVE_LINK = "activeLinkRaces";
 	private static final String INDEX_URL = "races/index";
+	
+	private final IRaceService service;
+	
+	public RaceController(IRaceService service) {
+		this.service = service;
+	}
 
 	@GetMapping(path = {"", "/"})
 	public String getIndex(Model model) {
 		log.debug("LOG: Class: " + this.getClass().getName() + " --> Method: " + LoggingUtils.getCurrentMethodName());
 		model.addAttribute(ACTIVE_LINK, true);
+		model.addAttribute("listOfRaces", service.findAll());
 		return INDEX_URL;
 	}
 

@@ -17,8 +17,25 @@ public class Race extends BaseEntity {
 
 	@Column(length = 20)
 	private String name;
-	
+
 	@Column(length = 20, name = "parent_race")
 	private String parentRace;
+
+	@Column(name = "attributes_physical")
+	private Integer attributesPhysical;
+	@Column(name = "attributes_mental")
+	private Integer attributesMental;
+	@Column(name = "attributes_spiritual")
+	private Integer attributesSpiritual;
+
+	@Column(name = "balance_law")
+	private Integer balanceLaw;
+	@Column(name = "balance_magic")
+	private Integer balanceMagic;
+	@Column(name = "balance_chaos")
+	private Integer balanceChaos;
+
+	@Column(name = "life_multiplier")
+	private Integer lifeMultiplier;
 
 }
