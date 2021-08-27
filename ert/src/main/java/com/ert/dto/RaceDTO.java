@@ -1,6 +1,9 @@
 package com.ert.dto;
 
+import java.util.List;
+
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;
@@ -44,5 +47,8 @@ public class RaceDTO extends BaseDTO {
 	@NotNull
 	@Positive
 	private Integer lifeMultiplier;
+
+	@NotEmpty
+	private List<RacialGiftDTO> listOfRacialGifts;
 
 }

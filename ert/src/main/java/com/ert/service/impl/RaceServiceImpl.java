@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.ert.domain.entity.Race;
 import com.ert.domain.repository.IRaceRepository;
 import com.ert.dto.RaceDTO;
+import com.ert.mapper.CycleAvoidingMappingContext;
 import com.ert.mapper.IRaceMapper;
 import com.ert.service.IRaceService;
 import com.ert.util.LoggingUtils;
@@ -31,7 +32,7 @@ public class RaceServiceImpl implements IRaceService {
 		log.debug("LOG: Class: " + this.getClass().getName() + " --> Method: " + LoggingUtils.getCurrentMethodName());
 		List<Race> listEntity = (List<Race>) repository.findAll();
 		List<RaceDTO> listDTO = new ArrayList<>();
-		listEntity.forEach((entity) -> { listDTO.add(IRaceMapper.INSTANCE.entityToDto(entity)); });
+		listEntity.forEach((entity) -> { listDTO.add(IRaceMapper.INSTANCE.entityToDto(entity, new CycleAvoidingMappingContext())); });
 		return listDTO;
 	}
 
@@ -39,14 +40,14 @@ public class RaceServiceImpl implements IRaceService {
 	@Transactional(readOnly = true)
 	public RaceDTO findById(Long id) {
 		log.debug("LOG: Class: " + this.getClass().getName() + " --> Method: " + LoggingUtils.getCurrentMethodName());
-		return IRaceMapper.INSTANCE.entityToDto(repository.findById(id).orElse(null));
+		return IRaceMapper.INSTANCE.entityToDto(repository.findById(id).orElse(null), new CycleAvoidingMappingContext());
 	}
 
 	@Override
 	@Transactional
 	public RaceDTO save(RaceDTO o) {
 		log.debug("LOG: Class: " + this.getClass().getName() + " --> Method: " + LoggingUtils.getCurrentMethodName());
-		return IRaceMapper.INSTANCE.entityToDto(repository.save(IRaceMapper.INSTANCE.dtoToEntity(o)));
+		return IRaceMapper.INSTANCE.entityToDto(repository.save(IRaceMapper.INSTANCE.dtoToEntity(o, new CycleAvoidingMappingContext())), new CycleAvoidingMappingContext());
 	}
 
 	@Override
