@@ -5,7 +5,53 @@
 <body>
 
 	<div th:fragment="paginaIndex" class="container">
-		KITS
+		<div th:unless="${#lists.isEmpty(listOfKits)}" class="row" data-masonry='{"percentPosition": true }'>
+			<div th:each="kit : ${listOfKits}" class="col-sm-6 col-lg-4 mt-4">
+				<div class="card border-primary text-center">
+					<div class="card-body">
+						<h5 th:text="${kit.name}" class="card-title fw-bold"></h5>
+						<table class="table table-sm table-borderless caption-top text-center">
+							<caption th:text="#{table.caption.races.balance}" class="text-center fw-bold text-light bg-primary"></caption>
+							<thead>
+								<tr>
+									<th th:text="#{table.column.balance.law}" class="table-primary" style="width: 33%"></th>
+									<th th:text="#{table.column.balance.magic}" class="table-warning" style="width: 33%"></th>
+									<th th:text="#{table.column.balance.chaos}" class="table-danger" style="width: 34%"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td th:text="'+' + ${kit.balanceLaw}" class="table-primary"></td>
+									<td th:text="'+' + ${kit.balanceMagic}" class="table-warning"></td>
+									<td th:text="'+' + ${kit.balanceChaos}" class="table-danger"></td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="table table-sm table-borderless text-center">
+							<thead>
+								<tr>
+									<th th:text="#{table.column.aspects}" class="table-secondary" style="width: 66%"></th>
+									<th th:text="#{table.column.life}" class="table-secondary" style="width: 34%"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td th:text="${kit.aspects}"></td>
+									<td th:text="'+' + ${kit.life} + 'D'"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div th:if="${#lists.isEmpty(listOfKits)}" class="row">
+			<div class="col-md-12">
+				<div class="alert alert-danger text-center" role="alert">
+  					<span th:text="#{alert.list.empty}"></span>
+				</div>
+			</div>
+		</div>
 	</div>
 
 </body>

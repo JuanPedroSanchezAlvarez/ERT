@@ -43,3 +43,15 @@ INSERT INTO racial_gifts (id, race_id, name) VALUES (29,  9, 'Levitación');
 INSERT INTO racial_gifts (id, race_id, name) VALUES (30,  9, 'Dones del Viento');
 INSERT INTO racial_gifts (id, race_id, name) VALUES (31, 10, 'Fuerza del Amanecer');
 INSERT INTO racial_gifts (id, race_id, name) VALUES (32, 10, 'Maestría en Trato con Otras Razas');
+
+INSERT INTO kits (id, name, balance_law, balance_magic, balance_chaos, life, aspects) VALUES ( 1, 'Aruj',                            0, 1, 1, 4, 'Uno cualquiera');
+INSERT INTO kits (id, name, balance_law, balance_magic, balance_chaos, life, aspects) VALUES ( 2, 'Bandido',                         0, 1, 0, 4, 'Uno cualquiera');
+INSERT INTO kits (id, name, balance_law, balance_magic, balance_chaos, life, aspects) VALUES ( 3, 'Brujo',                           0, 3, 0, 5, 'Agua, Aire, Fuego y Tierra');
+INSERT INTO kits (id, name, balance_law, balance_magic, balance_chaos, life, aspects) VALUES ( 4, 'Caballero de la Cruz Alada',      0, 2, 0, 6, 'Aire y Luz');
+INSERT INTO kits (id, name, balance_law, balance_magic, balance_chaos, life, aspects) VALUES ( 5, 'Caballero de la Llama Eterna',    0, 2, 0, 6, 'Fuego');
+INSERT INTO kits (id, name, balance_law, balance_magic, balance_chaos, life, aspects) VALUES ( 6, 'Caballero de la Orden de Litner', 0, 2, 0, 6, 'Muerte');
+INSERT INTO kits (id, name, balance_law, balance_magic, balance_chaos, life, aspects) VALUES ( 7, 'Euragan',                         0, 2, 0, 4, 'Energía y Tiempo');
+INSERT INTO kits (id, name, balance_law, balance_magic, balance_chaos, life, aspects) VALUES ( 8, 'Mago Imperial',                   0, 3, 0, 3, 'Todos');
+INSERT INTO kits (id, name, balance_law, balance_magic, balance_chaos, life, aspects) VALUES ( 9, 'Sadiurd',                         0, 2, 0, 4, 'Bestias y Naturaleza');
+INSERT INTO kits (id, name, balance_law, balance_magic, balance_chaos, life, aspects) VALUES (10, 'Soldado',                         0, 0, 0, 7, 'Uno cualquiera');
+INSERT INTO kits (id, name, balance_law, balance_magic, balance_chaos, life, aspects) VALUES (11, 'Trovador',                        0, 1, 0, 4, 'Uno cualquiera');

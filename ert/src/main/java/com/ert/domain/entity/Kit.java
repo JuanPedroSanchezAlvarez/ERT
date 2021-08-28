@@ -15,7 +15,19 @@ public class Kit extends BaseEntity {
 
 	private static final long serialVersionUID = 4323461075342052964L;
 
-	@Column(length = 20)
+	@Column(length = 35)
 	private String name;
+
+	@Column(name = "balance_law")
+	private Integer balanceLaw;
+	@Column(name = "balance_magic")
+	private Integer balanceMagic;
+	@Column(name = "balance_chaos")
+	private Integer balanceChaos;
+
+	private Integer life;
+
+	@Column(length = 30)
+	private String aspects;
 
 }
