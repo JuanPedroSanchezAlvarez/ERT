@@ -10,6 +10,48 @@
 				<div class="card border-primary text-center">
 					<div class="card-body">
 						<h5 th:text="${kit.name}" class="card-title fw-bold"></h5>
+						<table class="table table-sm table-borderless text-center">
+							<thead>
+								<tr>
+									<th th:text="#{table.column.skills.expert}" class="table-secondary"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-start">
+										<span th:each="kitSkill, i : ${kit.listOfKitSkills.?[trainingLevel == T(com.ert.util.Constants).SKILL_TRAININGLEVEL_EXPERT]}" th:text="${i.last} ? ${kitSkill.skill.nombre} + '.' : ${kitSkill.skill.nombre} + ', '"></span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="table table-sm table-borderless text-center">
+							<thead>
+								<tr>
+									<th th:text="#{table.column.skills.trained}" class="table-secondary"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-start">
+										<span th:each="kitSkill, i : ${kit.listOfKitSkills.?[trainingLevel == T(com.ert.util.Constants).SKILL_TRAININGLEVEL_TRAINED]}" th:text="${i.last} ? ${kitSkill.skill.nombre} + '.' : ${kitSkill.skill.nombre} + ', '"></span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="table table-sm table-borderless text-center">
+							<thead>
+								<tr>
+									<th th:text="#{table.column.skills.untrained}" class="table-secondary"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-start">
+										<span th:each="kitSkill, i : ${kit.listOfKitSkills.?[trainingLevel == T(com.ert.util.Constants).SKILL_TRAININGLEVEL_UNTRAINED]}" th:text="${i.last} ? ${kitSkill.skill.nombre} + '.' : ${kitSkill.skill.nombre} + ', '"></span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 						<table class="table table-sm table-borderless caption-top text-center">
 							<caption th:text="#{table.caption.races.balance}" class="text-center fw-bold text-light bg-primary"></caption>
 							<thead>

@@ -1,6 +1,9 @@
 package com.ert.dto;
 
+import java.util.List;
+
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;
@@ -34,5 +37,8 @@ public class KitDTO extends BaseDTO {
 	@NotBlank
 	@Size(max = 30)
 	private String aspects;
+
+	@NotEmpty
+	private List<KitSkillDTO> listOfKitSkills;
 
 }
