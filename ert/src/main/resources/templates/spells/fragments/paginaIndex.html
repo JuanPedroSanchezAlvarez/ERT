@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+	<div th:fragment="paginaIndex" class="container">
+		<div th:unless="${#lists.isEmpty(listOfSpells)}" class="row" data-masonry='{"percentPosition": true }'>
+			<div th:each="spell : ${listOfSpells}" class="col-sm-6 col-lg-4 mt-4">
+				<div class="card border-primary text-center">
+					<div class="card-body">
+						<h5 th:text="${spell.name}" class="card-title fw-bold"></h5>
+						<h6 th:text="'(' + #{card.subtitle.spells.level} + ' ' + ${spell.level} + ')'" class="card-subtitle mb-2"></h6>
+						<div class="d-grid gap-2">
+							<a th:text="#{card.button.spells.effect}" href="#" class="btn btn-outline-primary"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div th:if="${#lists.isEmpty(listOfSpells)}" class="row">
+			<div class="col-md-12">
+				<div class="alert alert-danger text-center" role="alert">
+  					<span th:text="#{alert.list.empty}"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
