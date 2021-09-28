@@ -18,6 +18,7 @@ public class MagicAspect extends BaseEntity {
 	@Column(length = 20)
 	private String name;
 
-	
-	//manytomany con hechizo
+	// @ManyToMany(mappedBy = "listOfMagicAspects")
+	// private List<Spell> listOfSpells;
+
 }

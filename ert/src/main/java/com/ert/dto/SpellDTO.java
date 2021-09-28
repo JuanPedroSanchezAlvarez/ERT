@@ -1,6 +1,9 @@
 package com.ert.dto;
 
+import java.util.List;
+
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PositiveOrZero;
 import javax.validation.constraints.Size;
@@ -35,5 +38,8 @@ public class SpellDTO extends BaseDTO {
 	@NotBlank
 	@Size(max = 300)
 	private String effect;
+
+	@NotEmpty
+	private List<MagicAspectDTO> listOfMagicAspects;
 
 }

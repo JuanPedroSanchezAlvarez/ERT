@@ -5,14 +5,24 @@
 <body>
 
 	<div th:fragment="paginaIndex" class="container">
+		<div th:replace="spells/fragments/effectModal :: effectModal"></div>
 		<div th:unless="${#lists.isEmpty(listOfSpells)}" class="row" data-masonry='{"percentPosition": true }'>
 			<div th:each="spell : ${listOfSpells}" class="col-sm-6 col-lg-4 mt-4">
 				<div class="card border-primary text-center">
 					<div class="card-body">
 						<h5 th:text="${spell.name}" class="card-title fw-bold"></h5>
 						<h6 th:text="'(' + #{card.subtitle.spells.level} + ' ' + ${spell.level} + ')'" class="card-subtitle mb-2"></h6>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item fw-bold">
+								<span th:text="#{table.column.aspects} + ': '"></span>
+								<span th:each="magicAspect, i : ${spell.listOfMagicAspects}" th:text="${i.last} ? ${magicAspect.name} + '.' : ${magicAspect.name} + ', '"></span>
+							</li>
+							<li th:text="#{table.column.spells.powerPoints} + ': ' + ${spell.powerPoints}" class="list-group-item"></li>
+							<li th:text="#{table.column.spells.learningDifficulty} + ': ' + ${spell.learningDifficulty}" class="list-group-item"></li>
+							<li th:text="#{table.column.spells.castingDifficulty} + ': ' + ${spell.castingDifficulty}" class="list-group-item mb-2"></li>
+						</ul>
 						<div class="d-grid gap-2">
-							<a th:text="#{card.button.spells.effect}" href="#" class="btn btn-outline-primary"></a>
+							<button type="button" th:text="#{card.button.spells.effect}" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#effectModal" th:data-bs-title="${spell.name}" th:data-bs-text="${spell.effect}"></button>
 						</div>
 					</div>
 				</div>
