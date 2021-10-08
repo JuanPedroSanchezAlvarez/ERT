@@ -19,48 +19,31 @@
 							<a th:class="${activeLinkCharacters} == true ? 'nav-link active' : 'nav-link'" href="/characters" th:text="#{menu.characters}"></a>
 						</li>
 						<li class="nav-item">
-							<a th:class="${activeLinkRaces} == true ? 'nav-link active' : 'nav-link'" href="/races" th:text="#{menu.races}"></a>
+							<a class="nav-link" th:classappend="${activeLinkRaces} == true ? 'active'" href="/races" th:text="#{menu.races}"></a>
 						</li>
 						<li class="nav-item">
-							<a th:class="${activeLinkKits} == true ? 'nav-link active' : 'nav-link'" href="/kits" th:text="#{menu.kits}"></a>
+							<a class="nav-link" th:classappend="${activeLinkKits} == true ? 'active'" href="/kits" th:text="#{menu.kits}"></a>
 						</li>
 						<li class="nav-item">
-							<a th:class="${activeLinkSpells} == true ? 'nav-link active' : 'nav-link'" href="/spells" th:text="#{menu.spells}"></a>
+							<a class="nav-link" th:classappend="${activeLinkSpells} == true ? 'active'" href="/spells" th:text="#{menu.spells}"></a>
 						</li>
-<!-- 						<li class="nav-item dropdown"> -->
-<!-- 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{menu.equipo}"></a> -->
-<!-- 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
-<!-- 								<li> -->
-<!-- 									<a class="dropdown-item" href="/armasCC" th:text="#{menu.armascc}"></a> -->
-<!-- 								</li> -->
-<!-- 								<li> -->
-<!-- 									<a class="dropdown-item" href="/armasCD" th:text="#{menu.armascd}"></a> -->
-<!-- 								</li> -->
-<!-- 								<li> -->
-<!-- 									<hr class="dropdown-divider"> -->
-<!-- 								</li> -->
-<!-- 								<li> -->
-<!-- 									<a class="dropdown-item" href="/blindajes" th:text="#{menu.blindajes}"></a> -->
-<!-- 								</li> -->
-<!-- 							</ul> -->
-<!-- 						</li> -->
-<!-- 						<li class="nav-item dropdown"> -->
-<!-- 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{menu.metafisica}"></a> -->
-<!-- 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
-<!-- 								<li> -->
-<!-- 									<a class="dropdown-item" href="/invocaciones" th:text="#{menu.magia}"></a> -->
-<!-- 								</li> -->
-<!-- 								<li> -->
-<!-- 									<a class="dropdown-item" href="/poderesVidente" th:text="#{menu.vision}"></a> -->
-<!-- 								</li> -->
-<!-- 								<li> -->
-<!-- 									<a class="dropdown-item" href="/poderesNigromanticos" th:text="#{menu.nigromancia}"></a> -->
-<!-- 								</li> -->
-<!-- 								<li> -->
-<!-- 									<a class="dropdown-item" href="/milagros" th:text="#{menu.inspiraciondivina}"></a> -->
-<!-- 								</li> -->
-<!-- 							</ul> -->
-<!-- 						</li> -->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" th:classappend="${activeLinkMeleeWeapons} == true ? 'active'" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{menu.equipment}"></a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li>
+									<a class="dropdown-item" href="/melee-weapons" th:text="#{menu.meleeWeapons}"></a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="/ranged-weapons" th:text="#{menu.rangedWeapons}"></a>
+								</li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li>
+									<a class="dropdown-item" href="/armors" th:text="#{menu.armors}"></a>
+								</li>
+							</ul>
+						</li>
 					</ul>
 <!-- 					<form class="d-flex"> -->
 <!-- 						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->

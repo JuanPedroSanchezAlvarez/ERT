@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+	<div th:fragment="paginaIndex" class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<table th:unless="${#lists.isEmpty(listOfMeleeWeapons)}" class="table table-striped table-responsive caption-top">
+					<caption th:text="#{table.caption.weapons.melee}" class="text-center fw-bold text-light bg-primary"></caption>
+					<thead>
+						<tr>
+							<th th:text="#{table.column.weapons.category}"></th>
+							<th th:text="#{table.column.weapons.name}"></th>
+							<th th:text="#{table.column.weapons.damage}"></th>
+							<th th:text="#{table.column.weapons.penetration}"></th>
+							<th th:text="#{table.column.weapons.speed}"></th>
+							<th th:text="#{table.column.weapons.size}"></th>
+							<th th:text="#{table.column.weapons.twoHanded}"></th>
+							<th th:text="#{table.column.weapons.skills}"></th>
+							<th th:text="#{table.column.weapons.cost}"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="meleeWeapon : ${listOfMeleeWeapons}">
+							<td th:text="${meleeWeapon.category.name}"></td>
+							<td th:text="${meleeWeapon.name}"></td>
+							<td th:text="${meleeWeapon.damage}"></td>
+							<td th:text="${meleeWeapon.penetration}"></td>
+							<td th:text="${meleeWeapon.speed.name}"></td>
+							<td th:text="${meleeWeapon.size.name}"></td>
+							<td th:text="${meleeWeapon.twoHanded} ? #{boolean.true} : #{boolean.false}"></td>
+							<td>
+								<span th:each="weaponSkill, i : ${meleeWeapon.listOfWeaponSkills}" th:text="${i.last} ? ${weaponSkill.name} + '.' : ${weaponSkill.name} + ', '"></span>
+							</td>
+							<td th:text="${meleeWeapon.cost} + ' Drg.'"></td>
+						</tr>
+					</tbody>
+				</table>
+				<div th:if="${#lists.isEmpty(listOfMeleeWeapons)}" class="alert alert-dark text-center" role="alert">
+  					<span th:text="#{alert.list.empty}"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
